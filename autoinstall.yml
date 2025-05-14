@@ -1,0 +1,27 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'Leo Silva'
+        hostname: ubuntu-desktop
+        username: dell2025g15
+        password: '$y$j9T$lSlvWBahr3Eo42Z8K29hj0$tsut29Dcore7HsuBvLjjzkXkTPKcToiIYi0nDcjOyD4'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - libreoffice
+        - gimp
+        - git
+        - wget
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
